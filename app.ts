@@ -1,0 +1,26 @@
+import express from "express";
+import cors from "cors";
+import morgan from "morgan";
+import cookieParser from "cookie-parser";
+
+import { router } from "./src/routes";
+import { globalErrorHandler } from "./src/utils/error";
+
+const createApp = () => {
+  const app = express();
+
+  app.use(express.static("src/utils/swagger"));
+
+  app.use(cookieParser());
+
+  app.use(cors());
+  app.use(express.json());
+  app.use(morgan("combined"));
+
+  app.use(router);
+  app.use(globalErrorHandler);
+
+  return app;
+};
+
+export { createApp };
