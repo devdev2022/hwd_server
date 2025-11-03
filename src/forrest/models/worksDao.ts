@@ -1,5 +1,5 @@
-import { AppDataSource } from "../../data-source";
-import { Works } from "../../entity/Works";
+import { AppDataSource } from "../../../data-source";
+import { Works } from "../../../entity/forrest/Works";
 
 const getWorksImg = async (
   page: number,

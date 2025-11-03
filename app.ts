@@ -3,8 +3,8 @@ import cors from "cors";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 
-import { router } from "./src/routes";
-import { globalErrorHandler } from "./src/utils/error";
+import { router } from "./src/forrest/routes";
+import { globalErrorHandler } from "./src/forrest/utils/error";
 
 const createApp = () => {
   const app = express();
