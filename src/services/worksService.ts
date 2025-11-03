@@ -1,8 +1,13 @@
 import worksDao from "../models/worksDao";
 
-const getPictures = async (page: number, category: string, limit: number) => {
+const getPictures = async (
+  page: number,
+  category: string,
+  subMenu: number,
+  limit: number
+) => {
   try {
-    return await worksDao.getWorksImg(page, category, limit);
+    return await worksDao.getWorksImg(page, category, subMenu, limit);
   } catch (error) {
     throw new Error("GET_PICTURES_FAILED");
   }
