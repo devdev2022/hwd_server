@@ -14,6 +14,9 @@ export class BusinessInfo {
   @Column()
   business_number!: string;
 
+  @Column()
+  business_address!: string;
+
   @Column({ nullable: true })
   fax_number!: string;
 

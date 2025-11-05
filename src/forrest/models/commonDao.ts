@@ -12,6 +12,7 @@ const getBusinessInfo = async () => {
         "BusinessInfo.ceo_name",
         "BusinessInfo.business_name",
         "BusinessInfo.business_number",
+        "BusinessInfo.business_address",
         "BusinessInfo.fax_number",
         "BusinessInfo.email_address",
         "BusinessInfo.instagram_link",
