@@ -13,6 +13,9 @@ export class Staff {
   @Column()
   name!: string;
 
+  @Column()
+  status!: string;
+
   @Column({ nullable: true })
   link?: string;
 

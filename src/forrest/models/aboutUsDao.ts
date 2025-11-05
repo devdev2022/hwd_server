@@ -7,7 +7,7 @@ const getStaffPictures = async () => {
   try {
     const data = await worksRepository
       .createQueryBuilder("Staff")
-      .select(["Staff.id", "Staff.name", "Staff.link", "Staff.name"])
+      .select(["Staff.id", "Staff.name", "Staff.status", "Staff.link"])
       .getMany();
 
     return data;
