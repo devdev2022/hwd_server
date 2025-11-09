@@ -18,6 +18,7 @@ const getBusinessInfo = async () => {
         "BusinessInfo.instagram_link",
         "BusinessInfo.blog_link",
         "BusinessInfo.contact_number",
+        "BusinessInfo.phone_number",
         "BusinessInfo.register_date",
       ])
       .getMany();
