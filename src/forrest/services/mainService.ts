@@ -8,4 +8,12 @@ const getPictures = async () => {
   }
 };
 
-export default { getPictures };
+const getSnsImg = async () => {
+  try {
+    return await mainDao.getSnsImg();
+  } catch (error) {
+    throw new Error("GET_CONTENTS_FAILED");
+  }
+};
+
+export default { getPictures, getSnsImg };

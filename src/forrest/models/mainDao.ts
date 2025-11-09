@@ -1,5 +1,6 @@
 import { AppDataSource } from "../../../data-source";
 import { Introduction } from "../../../entity/forrest/Introduction";
+import { SnsImg } from "../../../entity/forrest/SnsImg";
 
 const getIntroduction = async () => {
   const worksRepository = AppDataSource.getRepository(Introduction);
@@ -22,4 +23,19 @@ const getIntroduction = async () => {
   }
 };
 
-export default { getIntroduction };
+const getSnsImg = async () => {
+  const worksRepository = AppDataSource.getRepository(SnsImg);
+
+  try {
+    const data = await worksRepository
+      .createQueryBuilder("SnsImg")
+      .select(["SnsImg.id", "SnsImg.link", "SnsImg.created_at"])
+      .getMany();
+
+    return data;
+  } catch (err) {
+    throw new Error(`GET_DB_ERROR`);
+  }
+};
+
+export default { getIntroduction, getSnsImg };
