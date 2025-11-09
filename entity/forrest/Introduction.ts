@@ -13,6 +13,12 @@ export class Introduction {
   @Column({ nullable: true })
   content!: string;
 
+  @Column()
+  thumbnail!: string;
+
+  @Column()
+  cover_img!: string;
+
   @CreateDateColumn({ type: "timestamp" })
   created_at!: Date;
 }

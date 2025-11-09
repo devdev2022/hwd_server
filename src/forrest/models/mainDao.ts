@@ -10,6 +10,8 @@ const getIntroduction = async () => {
       .select([
         "Introduction.id",
         "Introduction.content",
+        "Introduction.thumbnail",
+        "Introduction.cover_img",
         "Introduction.created_at",
       ])
       .getMany();
